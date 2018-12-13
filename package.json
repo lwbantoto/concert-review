@@ -1,0 +1,25 @@
+{
+  "name": "example-node-server",
+  "version": "1.0.0",
+  "description": "Example Node Server w/ Babel",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel lib -d dist",
+    "start": "npm run build && nodemon lib/index.js",
+    "serve": "npm run build && node lib/index.js",
+    "test": "npm run build && mocha --require babel-register"
+  },
+  "author": "James Kyle <me@thejameskyle.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "firebase": "^5.7.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "firebase-admin": "^6.4.0"
+  }
+}
